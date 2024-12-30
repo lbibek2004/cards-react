@@ -1,0 +1,105 @@
+*{
+    color: black;
+    margin: 3px;
+}
+a{
+    text-decoration: none;
+}
+.card{
+    display: flex;
+    justify-content: flex-start;
+}
+.naruto,
+.sasuke,
+.sakura{
+    margin-right: 20px;
+    width: 20%;
+    height: 45vh;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 3px 2px 8px #331;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+.naruto:hover,
+.sasuke:hover,
+.sakura:hover{
+    height: max-content;
+    box-shadow: 0 2px 3px #000;
+    transform: scale(1.1);
+    margin: 30px 20px 0px 15px;
+    z-index: 1;  /* Add this line */
+    position: relative;  /* Add this line */
+}
+.naruto:hover{
+    background-image: linear-gradient(white, orange);
+}
+.sasuke:hover{
+    background-image: linear-gradient(white, #827297);
+}
+.sakura:hover{
+    background-image: linear-gradient(white, #E8BDBF);
+}
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+}
+.header{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.description{
+    justify-content: left;
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    .naruto,
+    .sasuke,
+    .sakura {
+        width: 45%;
+        margin: 10px;
+    }
+    
+    .card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .card img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .naruto,
+    .sasuke,
+    .sakura {
+        width: 80%;
+        margin: 10px auto;
+        height: auto;
+    }
+    
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .description {
+        font-size: 0.9em;
+    }
+}
